@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AutoFiltros Pro</title>
+<link rel="icon" href="data:,">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Arial,Helvetica,sans-serif;background:#0f1729;color:#e5e9f2;padding:20px;font-size:14px}
@@ -44,7 +45,6 @@ tr:hover td{background:#1d2436}
 .field input:focus{outline:none;border-color:#6366f1}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .item{padding:10px 12px;background:#1d2436;border-radius:6px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;font-size:13px}
-.item .cat{font-size:10px;padding:2px 8px;background:#252d42;border-radius:4px;color:#8b94a8;font-weight:700}
 .eqs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
 .eq{padding:8px 10px;background:#1d2436;border:1px solid #2a3247;border-radius:6px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-size:12px;gap:6px}
 .eq:hover{background:#252d42;border-color:#6366f1}
@@ -98,7 +98,7 @@ tr:hover td{background:#1d2436}
 </div>
 
 <script>
-var DATA_KEY = 'autofiltros_v4';
+var DATA_KEY = 'autofiltros_v5';
 
 var CROSS = {
   'WOE626':{MANN:'HU8006Z',FRAM:'CH11120ECO',TECFIL:'PEL727',MAHLE:'OX779D',HENGST:'E826HD268'},
@@ -136,10 +136,14 @@ var CROSS = {
   'FCD0922':{MANN:'WK820/6',FRAM:'G7974',TECFIL:'GI22/7',MAHLE:'KL977'},
   'FCD0923':{MANN:'WK820/6',FRAM:'G7974',TECFIL:'GI22/7',MAHLE:'KL977'},
   'JFC2073':{MANN:'WK828/3',FRAM:'P11107',TECFIL:'GI1010',MAHLE:'KL915'},
-  'FCI1696':{MANN:'WK69/1',FRAM:'G3824',TECFIL:'GI04/7',MAHLE:'KL582'}
+  'FCI1696':{MANN:'WK69/1',FRAM:'G3824',TECFIL:'GI04/7',MAHLE:'KL582'},
+  'AKX3589C':{MANN:'CU26012',FRAM:'CF12120',TECFIL:'ACP932',MAHLE:'LAK115'},
+  'E207HD221':{MANN:'HU7010Z',FRAM:'CH10600ECO',TECFIL:'PEL930',MAHLE:'OX385D'},
+  'JFA0W07':{MANN:'C25020',FRAM:'CA12080',TECFIL:'ARL4170',MAHLE:'LX4380'}
 };
 
 var DEFAULT_DATA = [
+  {id:'m1',veiculo:'MERCEDES BENS C250',oleo:'E207HD221',ar:'JFA0W07',cabine:'AKX3589C',combustivel:'',cambio:''},
   {id:'1',veiculo:'TORO/RENEGADE/COMPASS DIESEL',oleo:'WOE626',ar:'JFA0998',cabine:'AKX2108',combustivel:'FCD0793',cambio:''},
   {id:'2',veiculo:'TORO/RENEGADE/COMPASS FLEX',oleo:'WO133',ar:'JFA0998',cabine:'AKX2108',combustivel:'FCI1660',cambio:''},
   {id:'3',veiculo:'VIRTUS TSI',oleo:'04E115561AC',ar:'FAP3599',cabine:'ACP312',combustivel:'FCI1630',cambio:''},
